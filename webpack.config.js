@@ -6,6 +6,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 
 const IS_DEVELOPMENT = process.env.NODE_ENV === "dev";
 
@@ -22,6 +24,13 @@ module.exports = {
   },
 
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.pug",
+      minify: false,
+    }),
+
+    new HtmlWebpackPugPlugin(),
+
     new webpack.DefinePlugin({
       IS_DEVELOPMENT,
     }),
@@ -29,8 +38,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./assets",
-          to: "assets",
+          from: "./shared",
+          to: "",
         },
       ],
     }),
@@ -55,6 +64,10 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"],
+      },
       {
         test: /\.js$/,
         use: {
