@@ -25,7 +25,8 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "index.pug",
+      template: "./views/base.pug",
+      filename: "index.html",
       minify: false,
     }),
 

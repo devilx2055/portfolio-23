@@ -8,7 +8,7 @@ html
 
     base(href="/")
 
-    title="Priyanshu - Creative Developer"
+    title= "Priyanshu - Creative Developer"
 
     //- meta(name="description" content=meta.data.description)
 
@@ -37,11 +37,13 @@ html
     include ./partials/navigation
     include ./partials/footer
 
+    h1.hello-wrold Priyanshu
+
     //- include ./pages/about.pug
     //- include ./pages/collections.pug
     //- include ./pages/home.pug
 
-    script.
-      window.ASSETS = !{JSON.stringify(assets).replace(/<\//g, "<\\/")}
+    //- script.
+    //-   window.ASSETS = !{JSON.stringify(assets).replace(/<\//g, "<\\/")}
 
-    script(src="main.js")
+    //- script(src="main.js")
