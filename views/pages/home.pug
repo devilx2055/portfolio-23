@@ -4,4 +4,149 @@ block variables
     - var template = 'home'
 
 block content
-    h1.content__title Home
+    .home
+        .home__wrapper
+                .home__nav
+                    .home__nav--text
+                        p.home__nav--text--para
+                            | Currentyly doing
+                            | Freelancing
+
+                    .home__nav--text
+                        p.home__nav--text--para
+                            | Based in ahemdabad
+                            | India
+
+                section.home__info
+                    .home__info--para
+                        p.home__info--para--text
+                            | Creative
+                            | Developer
+
+                    figure.home__gallery__media
+                        img.home__gallery__media--image(alt="hello" src="../../shared/pic1.jpg")
+
+                    span.home__info--arrow
+
+                    .home__info--para
+                        p.home__info--para--text
+                            | Priyanshu
+                            | Vanra
+
+                section.home__about
+                    .home__about--wrapper
+                        p.home__about--wrapper--num 01/
+
+                        .home__about--wrapper--info
+                            .home__about--wrapper--info--para
+                                p.home__about--wrapper--info--para--text
+                                    | PASSIONATE ABOUT WEB TECHNOLOGIES. I LOVE WORKING AT
+                                    | THE INTERSECTION OF CREATIVITY AND USER FRIENDLY
+                                    | INTERFACES. I CREATE MEMORABLE WEB EXPERIENCES.
+
+                                p.home__about--wrapper--info--para--text
+                                    | WHEN I'M NOT BUILDING OR EXPLORING NEW WEB
+                                    | EXPERIENCES, I'M PROBABLY PLAYING GAMES OR WATCHING
+                                    | FOOTBALL.
+
+                            .home__about__wrpper--info--about
+                                p.home__about__wrpper--info--about--para
+                                    | A blend of UI and
+                                    | product engineering.
+
+                                .home__about__wrpper--info--about--text
+                                    p.home__about__wrpper--info--about--text--para
+                                        | With a background in design, I work closely with design
+                                        | focused teams to build websites and microsites for
+                                        | companies and individuals. I have years of experience
+                                        | working and collaborating on product teams and leading
+                                        | engineering efforts.
+
+                                    p.home__about__wrpper--info--about--text--para
+                                        | With my experience in UI and product engineering, I solve
+                                        | product problems and build appealing usable web
+                                        | experiences.
+
+                                    a.home__about__wrpper--info--about--text--link(href="/work") More about me and services
+
+                section.home__project
+                    .home__project--title
+                        p.home__project--title--num  02/
+
+                        p.home__project--title--time
+                            | RECENT
+                            | PROJECT
+
+                        p.home__project--title--text
+                            | CREATIVE
+                            | DEVELOPMENT
+
+                    .home__project--about
+                        .home__project--about--info
+                            p.home__project--about--info--title
+                                | CRUNNNNN
+                                | CHIFFFY
+
+                            p.home__project--about--info--para
+                                | AN ANALYSIS AND
+                                | DISCOVERY TOOL FOR
+                                | SPOTIFY USERS
+
+                        figure.home__project--about--gallery--media
+                            img.home__prpject--about--gallery--media--image(alt="helllo" src="../../shared/pic1.jpg")
+
+                    .home__project--about
+                        .home__project--about--info
+                            p.home__project--about--info--title INTELIA
+
+                            p.home__project--about--info--para
+                                | AN ANALYSIS AND
+                                | DISCOVERY TOOL FOR
+                                | SPOTIFY USERS
+
+                        figure.home__project--about--gallery--media
+                            img.home__prpject--about--gallery--media--image(alt="helllo" src="../../shared/pic1.jpg")
+
+                section.home__intro
+                    .home__intro__wrapper
+                        p.home__intro__wrapper--num 03/
+
+                        .home__intro__wrapper__info
+                            p.home__intro__wrapper__info--text FOOTBALL,
+
+                            figure.home__intro__wrapper__info--gallery--media
+                                img.home__intro__wrapper__info--gallery--media--image(alt="hello" src="../../shared/pic1.jpg")
+
+                            p.home__intro__wrapper__info--text GAMING,
+
+                            p.home__intro__wrapper__info--text MUSIC,
+
+                            .home__intro__wrapper__info--paras
+                                p.home__intro__wrapper__info--paras--text
+                                    | My hobbies take up a good portion of my leisure
+                                    | time. I'm either cheering up FC Bayern Munich,
+                                    | winning a game of FIFA with them, exploring VR
+                                    | experiences or listening to delightful music.
+
+                                a.home__intro__wrapper__info--paras-a(href="/about") More about me
+
+                section.home__contact
+                    .home__contact__wrapper
+                        .home__contact--title
+                            p.home__contact--title--num  04/
+
+                            p.home__contact--title--time
+                                | WANT TO
+                                | WORK TOGETHER ?
+
+                            p.home__contact--title--text
+                                | SEND ME A
+                                | MESSAGE
+
+                        .home__contact--email
+                            p.home__contact--email--para
+                                | PRIYANSHUVANRA
+                                | 2@GMAIL.COM
+
+    //- footer
+    include ../partials/footer
