@@ -4,6 +4,35 @@ block variables
     - var template = 'contact'
 
 block content
-    h1.content__title Contact
+    .contact
+        .contact__wrapper
+            .contact__nav
+                .contact__nav--text
+                    p.contact__nav--text--para
+                        | Currentyly doing
+                        | Freelancing
+
+                .contact__nav--text
+                    p.contact__nav--text--para
+                        | Based in ahemdabad
+                        | India
+
+            section.contact__info
+                .contact__info__email
+                    p.contact__info__email__para send me a message
+
+                    p.contact__info__email__para
+                        | priyanshuvanra
+                        | 2@gmail.com
+
+                .contact__info__social
+                    p.contact__info__social__para
+                        | or connect with
+                        | me on social
+
+                    .contact__info__social__links
+                        a.contact__info__social__link(href="#") TWITTER
+                        a.contact__info__social__link(href="#") INSTAGRAM
+                        a.contact__info__social__link(href="#") GITHUB
 
     include ../partials/footer
