@@ -1,0 +1,26 @@
+@font-face {
+  font-family: $font-ppneue;
+  src: url("../font/papu-book.woff2") format("woff2"),
+    url("../font/papu-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-ppneue;
+  src: url("../font/papu-bold.woff2") format("woff2"),
+    url("../font/papu-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-ppneue;
+  src: url("../font/papu-medium.woff2") format("woff2"),
+    url("../font/papu-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
