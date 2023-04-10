@@ -6,6 +6,17 @@
   left: 0;
 }
 
+%container {
+  max-width: 1750px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+%font-family {
+  font-family: $font-ppneue;
+  font-weight: 500;
+}
+
 %center {
   display: flex;
   align-items: center;

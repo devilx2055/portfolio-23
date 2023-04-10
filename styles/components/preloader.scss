@@ -1,8 +1,25 @@
 .preloader {
+  @extend %cover;
+  @extend %font-family;
+  background-color: black;
+  color: white;
+  display: none;
 }
+
 .preloader__text {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 20rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
+
 .preloader__number {
-}
-.preloader__number__text {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 8rem;
 }
