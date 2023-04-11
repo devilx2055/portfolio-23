@@ -1,43 +1,71 @@
 .home {
   @extend %font-family;
+  background-color: $color-liberty;
+  color: $color-black;
 }
 
 .home__wrapper {
-  margin: 0 3rem;
-  overflow: hidden;
+  @extend %container;
 }
 
 .home__nav {
+  @extend %center;
+  width: 50%;
+  margin: 2rem auto;
+  justify-content: space-between;
 }
 
 .home__nav--text {
-}
-
-.home__nav--text--para {
-}
-
-.home__nav--text {
-}
-
-.home__nav--text--para {
+  width: 11rem;
+  text-align: center;
+  @extend %description-14;
+  line-height: 1.2;
+  text-transform: capitalize;
 }
 
 .home__info {
 }
 
 .home__info--para {
-}
+  @extend %title-90;
+  text-transform: uppercase;
+  width: 55rem;
+  line-height: 0.9;
+  padding-bottom: 3rem;
 
-.home__info--para--text {
+  &:last-child {
+    text-align: right;
+  }
 }
 
 .home__gallery__media {
+  width: 45rem;
+  height: 20rem;
+  padding-bottom: 3rem;
 }
 
 .home__gallery__media--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.home__info--arrow {
+.home__info__arrow__para {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__info__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.home__info__arrow__logo {
+}
+
+.home__info__arrow__text {
 }
 
 .home__info--para {
