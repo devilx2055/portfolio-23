@@ -6,19 +6,23 @@
 
 .home__wrapper {
   @extend %container;
+
+  section {
+    padding-bottom: 20rem;
+  }
 }
 
 .home__nav {
   @extend %center;
-  width: 50%;
-  margin: 2rem auto;
+  width: 40%;
+  margin: 4.2rem auto;
   justify-content: space-between;
 }
 
 .home__nav--text {
-  width: 11rem;
+  width: 20rem;
   text-align: center;
-  @extend %description-14;
+  @extend %description-22;
   line-height: 1.2;
   text-transform: capitalize;
 }
@@ -27,21 +31,22 @@
 }
 
 .home__info--para {
-  @extend %title-90;
+  @extend %title-144;
   text-transform: uppercase;
-  width: 55rem;
+  width: 85rem;
   line-height: 0.9;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 
   &:last-child {
     text-align: right;
+    padding-bottom: 0;
   }
 }
 
 .home__gallery__media {
-  width: 45rem;
-  height: 20rem;
-  padding-bottom: 3rem;
+  width: 73rem;
+  height: 30rem;
+  padding-bottom: 5rem;
 }
 
 .home__gallery__media--image {
@@ -68,49 +73,66 @@
 .home__info__arrow__text {
 }
 
-.home__info--para {
-}
-
-.home__info--para--text {
-}
-
 .home__about {
 }
 
 .home__about--wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .home__about--wrapper--num {
+  width: 35%;
+  @extend %description-22;
 }
 
 .home__about--wrapper--info {
+  width: 100%;
+  padding-right: 15rem;
 }
 
 .home__about--wrapper--info--para {
+  @extend %description-40;
+  line-height: 1.3;
+  padding-bottom: 10rem;
 }
 
 .home__about--wrapper--info--para--text {
-}
+  padding-bottom: 5rem;
 
-.home__about--wrapper--info--para--text {
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .home__about__wrpper--info--about {
+  display: flex;
+  padding-right: 20rem;
 }
 
 .home__about__wrpper--info--about--para {
+  line-height: 1.2;
+  width: 65%;
+  padding-right: 20rem;
+  @extend %description-22;
 }
 
 .home__about__wrpper--info--about--text {
+  width: 100%;
 }
 
 .home__about__wrpper--info--about--text--para {
-}
-
-.home__about__wrpper--info--about--text--para {
+  @extend %description-22;
+  line-height: 1.3;
+  padding-bottom: 4rem;
 }
 
 .home__about__wrpper--info--about--text--link {
+  text-decoration: none;
+  @extend %description-22;
+  padding-bottom: 2rem;
+  text-transform: capitalize;
+  color: $color-black;
 }
 
 .home__project {
