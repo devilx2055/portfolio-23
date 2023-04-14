@@ -22,6 +22,31 @@
   justify-content: center;
 }
 
+%hover-effect {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.8px;
+    background-color: $color-black;
+  }
+
+  &::before {
+    width: 10%;
+    background-color: $color-liberty;
+    z-index: 1;
+    transform: translateX(-28px);
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover::before {
+    transform: translateX(274px);
+  }
+}
+
 @mixin ratio($height, $width) {
   font-size: 0;
   overflow: hidden;
