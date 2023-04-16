@@ -1,12 +1,38 @@
 .footer {
 }
+
 .footer__wrapper {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %container;
+  @extend %description-22;
 }
+
 .footer__list {
+  display: flex;
 }
+
 .footer__list__item {
+  &:not(:last-child) {
+    padding-right: 0.5rem;
+  }
 }
+
 .footer__link {
+  text-decoration: none;
+  color: $color-black;
+  @extend %link--hidden;
+  padding-bottom: 1rem;
 }
+
 .footer__text {
+  width: 20rem;
+  line-height: 1.2;
+
+  &:last-child {
+    width: 30rem;
+    text-align: end;
+  }
 }

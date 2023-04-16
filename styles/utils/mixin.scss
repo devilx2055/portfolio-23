@@ -22,6 +22,15 @@
   justify-content: center;
 }
 
+%btn-a {
+  position: relative;
+  text-decoration: none;
+  @extend %description-22;
+  padding-bottom: 2rem;
+  text-transform: capitalize;
+  color: $color-black;
+}
+
 %hover-effect {
   &::after,
   &::before {
@@ -38,13 +47,19 @@
     width: 10%;
     background-color: $color-liberty;
     z-index: 1;
-    transform: translateX(-28px);
-    transition: all 0.5s ease-in-out;
+    left: -10%;
+    transition: all 1s $ease-in-out;
   }
 
   &:hover::before {
-    transform: translateX(274px);
+    left: 100%;
   }
+}
+
+%img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @mixin ratio($height, $width) {
