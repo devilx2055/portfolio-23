@@ -80,36 +80,42 @@ block content
                     .home__project--title
                         p.home__project--title--num  02/
 
-                        p.home__project--title--time
-                            | RECENT
-                            | PROJECT
+                        .home__project--title--time
+                            p.home__project--title--time--text
+                                | RECENT
+                                | PROJECT
 
-                        p.home__project--title--text
-                            | CREATIVE
-                            | DEVELOPMENT
+                        .home__project--title--text
+                            p.home__project--title--text--para
+                                | CREATIVE
+                                | DEVELOPMENT
 
                     .home__project--about
                         .home__project--about--info
-                            p.home__project--about--info--title
-                                | CRUNNNNN
-                                | CHIFFFY
+                            span.home__project--about--info--title--span
+                                p.home__project--about--info--title--span--text CRUUUN
+                                p.home__project--about--info--title--span--text CHIFY
 
-                            p.home__project--about--info--para
-                                | AN ANALYSIS AND
-                                | DISCOVERY TOOL FOR
-                                | SPOTIFY USERS
+
+                            .home__project--about--info--para
+                                p.home__project--about--info--para--text
+                                    | AN ANALYSIS AND
+                                    | DISCOVERY TOOL FOR
+                                    | SPOTIFY USERS
 
                         figure.home__project--about--gallery--media
                             img.home__prpject--about--gallery--media--image(alt="helllo" src="../../shared/pic1.jpg")
 
                     .home__project--about
                         .home__project--about--info
-                            p.home__project--about--info--title INTELIA
+                            span.home__project--about--info--title--span
+                                p.home__project--about--info--title--span--text INTELIA
 
-                            p.home__project--about--info--para
-                                | AN ANALYSIS AND
-                                | DISCOVERY TOOL FOR
-                                | SPOTIFY USERS
+                            .home__project--about--info--para
+                                p.home__project--about--info--para--text
+                                    | AN ANALYSIS AND
+                                    | DISCOVERY TOOL FOR
+                                    | SPOTIFY USERS
 
                         figure.home__project--about--gallery--media
                             img.home__prpject--about--gallery--media--image(alt="helllo" src="../../shared/pic1.jpg")
@@ -126,34 +132,41 @@ block content
 
                             p.home__intro__wrapper__info--text GAMING,
 
-                            p.home__intro__wrapper__info--text MUSIC,
+                            p.home__intro__wrapper__info--text MUSIC.
 
                             .home__intro__wrapper__info--paras
-                                p.home__intro__wrapper__info--paras--text
-                                    | My hobbies take up a good portion of my leisure
-                                    | time. I'm either cheering up FC Bayern Munich,
-                                    | winning a game of FIFA with them, exploring VR
-                                    | experiences or listening to delightful music.
+                                .home__intro__wrapper__info--paras--text
+                                    p.home__intro__wrapper__info--paras--text--p
+                                        | My hobbies take up a good portion of my leisure
+                                        | time. I'm either cheering up FC Bayern Munich,
+                                        | winning a game of FIFA with them, exploring VR
+                                        | experiences or listening to delightful music.
 
                                 a.home__intro__wrapper__info--paras-a(href="/about") More about me
+
+                        p.home__intro__wrapper--num About Me
 
                 section.home__contact
                     .home__contact__wrapper
                         .home__contact--title
                             p.home__contact--title--num  04/
 
-                            p.home__contact--title--time
-                                | WANT TO
-                                | WORK TOGETHER ?
+                            .home__contact--title--time
+                                p.home__contact--title--time--text
+                                    | WANT TO
+                                    | WORK TOGETHER ?
 
-                            p.home__contact--title--text
-                                | SEND ME A
-                                | MESSAGE
+                            .home__contact--title--text
+                                p.home__contact--title--text-p
+                                    | SEND ME A
+                                    | MESSAGE
 
                         .home__contact--email
-                            p.home__contact--email--para
-                                | PRIYANSHUVANRA
-                                | 2@GMAIL.COM
+                            span.home__contact--email--span
+                                p.home__contact--email--span--para PRIYANSHUVANRA
+                                p.home__contact--email--span--para 2@GMAIL.COM
+                            //- p.home__contact--email--para PRIYANSHUVANRA
+                            //- p.home__contact--email--para 2@GMAIL.COM
 
-    //- footer
-    include ../partials/footer
+        //- footer
+        include ../partials/footer
