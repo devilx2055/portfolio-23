@@ -1,12 +1,37 @@
 .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  top: 4.5rem;
+  height: 100%;
+  width: 100%;
+  @extend %description-22;
+  font-family: $font-ppneue;
+  color: $color-black;
 }
+
 .navigation__wrapper {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
 }
+
 .navigation__link {
+  @extend %btn-a;
+  padding-bottom: 1rem;
 }
+
 .navigation__list {
+  display: flex;
 }
+
 .navigation__list__item {
+  &:not(:last-child) {
+    padding-right: 0.5rem;
+  }
 }
+
 .navigation__link {
+  @extend %link--hidden;
+  padding-bottom: 1rem;
 }
