@@ -1,0 +1,14 @@
+%page__nav {
+  @extend %center;
+  width: 40%;
+  margin: 4.2rem auto;
+  justify-content: space-between;
+}
+
+%page__nav--text {
+  width: 20rem;
+  text-align: center;
+  @extend %description-22;
+  line-height: 1.2;
+  text-transform: capitalize;
+}

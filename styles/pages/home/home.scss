@@ -13,18 +13,11 @@
 }
 
 .home__nav {
-  @extend %center;
-  width: 40%;
-  margin: 4.2rem auto;
-  justify-content: space-between;
+  @extend %page__nav;
 }
 
 .home__nav--text {
-  width: 20rem;
-  text-align: center;
-  @extend %description-22;
-  line-height: 1.2;
-  text-transform: capitalize;
+  @extend %page__nav--text;
 }
 
 .home__info {
@@ -168,17 +161,9 @@
 
 .home__project--about--info--title--span {
   .home__project--about--info--title--span--text {
-    width: fit-content;
-    @extend %title-144;
-    @extend %hover-effect;
-    position: relative;
-    line-height: 1.1;
-
-    &::after,
-    &::before {
-      height: 1rem;
-    }
+    @extend %about-btn;
   }
+
   &:hover {
     .home__project--about--info--title--span--text::before {
       left: 100%;
@@ -257,23 +242,21 @@
 }
 
 .home__contact {
+  padding-bottom: 10rem !important;
 }
 
 .home__contact__wrapper {
 }
 
 .home__contact--title {
-  display: flex;
-  @extend %description-22;
-  line-height: 1.2;
+  @extend %page__con--title;
 }
 
 .home__contact--title--num {
 }
 
 .home__contact--title--time {
-  margin: 0 50rem 0 28rem;
-  width: 15%;
+  @extend %page__con--title--time;
 }
 
 .home__contact--title--text {
@@ -282,20 +265,12 @@
 
 .home__contact--email {
   padding-top: 10rem;
+  width: min-content;
 }
 
 .home__contact--email--span {
   .home__contact--email--span--para {
-    @extend %title-144;
-    position: relative;
-    @extend %hover-effect;
-    width: fit-content;
-    line-height: 1.1;
-
-    &::after,
-    &::before {
-      height: 1rem;
-    }
+    @extend %page__con--email--span--para;
   }
 
   &:hover {

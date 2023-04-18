@@ -3,22 +3,23 @@
   top: 0;
   left: 0;
   top: 4.5rem;
-  height: 100%;
   width: 100%;
-  @extend %description-22;
   font-family: $font-ppneue;
-  color: $color-black;
+  mix-blend-mode: difference;
+  z-index: 10;
 }
 
 .navigation__wrapper {
   @extend %container;
   display: flex;
   justify-content: space-between;
+  @extend %description-22;
 }
 
 .navigation__link {
   @extend %btn-a;
   padding-bottom: 1rem;
+  color: white;
 }
 
 .navigation__list {
@@ -34,4 +35,5 @@
 .navigation__link {
   @extend %link--hidden;
   padding-bottom: 1rem;
+  color: white;
 }
