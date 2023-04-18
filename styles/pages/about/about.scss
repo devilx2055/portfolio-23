@@ -1,190 +1,267 @@
 .about {
+  @extend %font-family;
+  background-color: $color-liberty;
+  color: $color-black;
 }
+
 .about__wrapper {
+  @extend %container;
+  @extend %description-22;
+
+  section {
+    padding-bottom: 20rem;
+  }
 }
+
 .about__nav {
+  @extend %page__nav;
 }
-.home__nav--text {
+
+.about__nav--text {
+  @extend %page__nav--text;
 }
-.home__nav--text--para {
-}
-.home__nav--text {
-}
-.home__nav--text--para {
-}
+
 .about__info {
 }
+
 .about__info__wrapper {
+  display: flex;
 }
+
 .about__info__title {
+  padding-right: 30rem;
 }
+
 .about__info__para {
 }
+
 .about__info__para__text {
+  @extend %title-144;
+  width: 50%;
 }
+
 .about__info__gallry__media {
+  width: 86rem;
+  height: 55rem;
+  padding: 3rem 0;
 }
+
 .about__info__gallry__media__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 .about__info__para__text {
 }
+
 .about__info__journey {
+  padding-top: 15rem;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
 }
+
 .about__info__journey__para {
+  width: 20%;
+  line-height: 1.2;
 }
+
 .about__info__journey__into {
+  width: 45%;
 }
+
 .about__info__journey__intro__para {
+  padding-bottom: 5rem;
+  line-height: 1.2;
 }
-.about__info__journey__intro__para {
-}
+
 .about__info__journey__intro__media {
+  width: 100%;
+  height: 65rem;
 }
+
 .about__info__journey__intro__media__image {
+  width: 100%;
+  height: 100%;
 }
+
 .about_services {
 }
+
 .about__services__wrapper {
 }
+
 .about__service__header {
+  display: flex;
+  padding-bottom: 10rem;
 }
+
 .about__service__header__title {
+  padding-right: 30rem;
 }
+
 .about__service__header__para {
+  @extend %title-144;
+  text-transform: uppercase;
+  line-height: 0.8;
 }
+
 .about__service__content__wrapper {
+  padding-left: 34rem;
 }
+
 .about__service__content {
+  position: relative;
+
+  &:nth-child(1) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: black;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color-black;
+  }
 }
+
 .about__service__content__header {
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  position: relative;
 }
+
 .about__service__content__header__title {
 }
+
 .about__service__content__header__para {
+  position: absolute;
+  left: 25%;
 }
+
 .about__service__content__header__icon {
+  position: absolute;
+  right: 0;
 }
+
 .about__service__content__body {
+  display: none;
+  width: 70%;
+  padding-left: 35.5rem;
+  padding-bottom: 10rem;
 }
+
 .about__service__content__body__para {
+  line-height: 1.2;
 }
-.about__service__content {
-}
-.about__service__content__header {
-}
-.about__service__content__header__title {
-}
-.about__service__content__header__para {
-}
-.about__service__content__header__icon {
-}
-.about__service__content__body {
-}
-.about__service__content__body__para {
-}
-.about__service__content {
-}
-.about__service__content__header {
-}
-.about__service__content__header__title {
-}
-.about__service__content__header__para {
-}
-.about__service__content__header__icon {
-}
-.about__service__content__body {
-}
-.about__service__content__body__para {
-}
+
 .about__awards {
 }
+
 .about__awards__wrapper {
 }
+
 .about__awards__header {
+  display: flex;
+  padding-bottom: 10rem;
 }
+
 .about__awards__header__title {
+  padding-right: 30rem;
 }
+
 .about__awards__header__para {
+  @extend %title-144;
 }
+
 .about__awards__info__wrapper {
+  padding-left: 34rem;
 }
+
 .about__awards__info {
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 0;
+  position: relative;
+
+  &:not(:first-child) {
+    text-transform: capitalize;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color-black;
+  }
 }
+
 .about__awards__info__name {
+  position: absolute;
+  left: 0;
 }
+
 .about__awards__info__platform {
+  position: absolute;
+  left: 40%;
 }
+
 .about__awards__info__year {
+  position: absolute;
+  right: 5rem;
 }
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
-.about__awards__info {
-}
-.about__awards__info__name {
-}
-.about__awards__info__platform {
-}
-.about__awards__info__year {
-}
+
 .about__contact {
+  padding-bottom: 10rem !important;
 }
+
 .about__contact__wrapper {
 }
-.home__contact--title {
+
+.about__contact--title {
+  @extend %page__con--title;
 }
-.home__contact--title--num {
+
+.about__contact--title--num {
 }
-.home__contact--title--time {
+
+.about__contact--title--time {
+  @extend %page__con--title--time;
 }
-.home__contact--title--text {
+
+.about__contact--title--text {
+  width: 10%;
 }
-.home__contact--email {
+
+.about__contact--email {
+  padding-top: 10rem;
+  width: min-content;
 }
-.home__contact--email--para {
+
+.about__contact--email--span {
+  .about__contact--email--span--para {
+    @extend %page__con--email--span--para;
+  }
+
+  &:hover {
+    .about__contact--email--span--para::before {
+      left: 100%;
+    }
+  }
 }
