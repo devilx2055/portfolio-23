@@ -1,34 +1,84 @@
 .contact {
+  @extend %font-family;
+  background-color: $color-black;
+  color: $color-white;
 }
+
 .contact__wrapper {
+  @extend %container;
+  @extend %description-22;
 }
+
 .contact__nav {
+  @extend %page__nav;
 }
+
 .contact__nav--text {
+  @extend %page__nav--text;
 }
-.contact__nav--text--para {
-}
-.contact__nav--text {
-}
-.contact__nav--text--para {
-}
+
 .contact__info {
 }
+
 .contact__info__email {
+  text-transform: uppercase;
+  @extend %flex-col-center;
+  justify-content: center;
+  padding: 15rem 0 30rem 0;
 }
-.contact__info__email__para {
+
+.contact__info__email__span {
+  padding-top: 5rem;
+  @extend %flex-col-center;
+
+  .contact__info__email__span__para {
+    @extend %page__con--email--span--para;
+
+    &::after {
+      background-color: $color-white;
+    }
+    &::before {
+      background-color: $color-black;
+    }
+  }
+  &:hover {
+    .contact__info__email__span__para::before {
+      left: 100%;
+    }
+  }
 }
-.contact__info__email__para {
-}
+
 .contact__info__social {
+  @extend %flex-col-center;
+  text-transform: uppercase;
+  padding-bottom: 20rem;
 }
+
 .contact__info__social__para {
+  width: 20rem;
+  text-align: center;
+  line-height: 1.2;
 }
+
 .contact__info__social__links {
+  padding-top: 10rem;
+  @extend %flex-col-center;
 }
+
 .contact__info__social__link {
+  line-height: 0.8;
+  margin-bottom: 1rem;
+  @extend %btn-a;
+  @extend %page__con--email--span--para;
+  color: $color-white;
+  &::after {
+    background-color: $color-white;
+  }
+  &::before {
+    background-color: $color-black;
+  }
 }
-.contact__info__social__link {
-}
-.contact__info__social__link {
+
+.contact .footer__link {
+  color: $color-white;
 }

@@ -22,6 +22,12 @@
   justify-content: center;
 }
 
+%flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 %btn-a {
   position: relative;
   text-decoration: none;
