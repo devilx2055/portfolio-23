@@ -6,6 +6,7 @@
 
 .home__wrapper {
   @extend %container;
+  @extend %description-22;
 
   section {
     padding-bottom: 20rem;
@@ -53,15 +54,19 @@
 
 .home__info__arrow {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
+  align-items: end;
+  width: 100%;
 }
 
 .home__info__arrow__logo {
+  @extend %title-144;
 }
 
 .home__info__arrow__text {
+  width: 30rem;
+  margin-left: 20rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .home__about {
