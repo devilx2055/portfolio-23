@@ -25,6 +25,10 @@
   @extend %flex-col-center;
   justify-content: center;
   padding: 15rem 0 30rem 0;
+
+  @include media("<=phone") {
+    padding: 30rem 0 30rem 0;
+  }
 }
 
 .contact__info__email__span {
@@ -52,6 +56,10 @@
   @extend %flex-col-center;
   text-transform: uppercase;
   padding-bottom: 20rem;
+
+  @include media("<=phone") {
+    padding-top: 20rem;
+  }
 }
 
 .contact__info__social__para {

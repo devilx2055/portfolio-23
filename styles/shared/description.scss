@@ -5,8 +5,16 @@
 
 %description-22 {
   font-size: 2.2rem;
+
+  @include media("<=phone") {
+    font-size: 2rem;
+  }
 }
 
 %description-40 {
   font-size: 4rem;
+
+  @include media("<phone") {
+    font-size: 3rem;
+  }
 }

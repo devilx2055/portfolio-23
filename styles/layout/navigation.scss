@@ -24,6 +24,10 @@
 
 .navigation__list {
   display: flex;
+
+  @include media("<=phone") {
+    display: none;
+  }
 }
 
 .navigation__list__item {

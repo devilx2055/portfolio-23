@@ -1,3 +1,7 @@
 %title-144 {
   font-size: 14.4rem;
+
+  @include media("<=phone") {
+    font-size: 5.6rem;
+  }
 }

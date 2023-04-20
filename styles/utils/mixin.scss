@@ -9,6 +9,10 @@
 %container {
   margin: 0 7rem;
   overflow: hidden;
+
+  @include media("<=phone") {
+    margin: 0 3rem;
+  }
 }
 
 %font-family {

@@ -8,6 +8,14 @@
   align-items: center;
   @extend %container;
   @extend %description-22;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 5rem 0;
+  }
 }
 
 .footer__list {
@@ -34,5 +42,9 @@
   &:last-child {
     width: 30rem;
     text-align: end;
+
+    @include media("<=phone") {
+      text-align: start;
+    }
   }
 }

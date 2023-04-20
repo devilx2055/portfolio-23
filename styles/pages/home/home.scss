@@ -2,6 +2,10 @@
   @extend %font-family;
   background-color: $color-liberty;
   color: $color-black;
+
+  @include media("<=phone") {
+    padding-top: 30rem;
+  }
 }
 
 .home__wrapper {
@@ -34,6 +38,16 @@
   &:last-child {
     text-align: right;
     padding-bottom: 0;
+
+    @include media("<=phone") {
+      text-align: left;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @include media("<=phone") {
+    width: 35rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -41,6 +55,10 @@
   width: 73rem;
   height: 30rem;
   padding-bottom: 5rem;
+
+  @include media("<=phone") {
+    padding-bottom: 2rem;
+  }
 }
 
 .home__gallery__media--image {
@@ -50,12 +68,22 @@
 .home__info__arrow__para {
   display: flex;
   justify-content: space-between;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
 }
 
 .home__info__arrow {
   display: flex;
   align-items: end;
   width: 100%;
+
+  @include media("<=phone") {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .home__info__arrow__logo {
@@ -67,6 +95,10 @@
   margin-left: 20rem;
   margin-bottom: 1rem;
   line-height: 1.2;
+
+  @include media("<=phone") {
+    width: 50%;
+  }
 }
 
 .home__about {
@@ -75,6 +107,11 @@
 .home__about--wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .home__about--wrapper--num {
@@ -85,12 +122,20 @@
 .home__about--wrapper--info {
   width: 100%;
   padding-right: 15rem;
+
+  @include media("<=phone") {
+    padding-right: 0;
+  }
 }
 
 .home__about--wrapper--info--para {
   @extend %description-40;
   line-height: 1.3;
   padding-bottom: 10rem;
+
+  @include media("<=phone") {
+    padding-bottom: 5rem;
+  }
 }
 
 .home__about--wrapper--info--para--text {
@@ -104,6 +149,12 @@
 .home__about__wrpper--info--about {
   display: flex;
   padding-right: 20rem;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+    padding-right: 0;
+  }
 }
 
 .home__about__wrpper--info--about--para {
@@ -140,28 +191,54 @@
   @extend %description-22;
   line-height: 1.2;
   padding-bottom: 10rem;
+
+  @include media("<=phone") {
+    justify-content: space-between;
+  }
 }
 
 .home__project--title--num {
   padding-right: 40rem;
+
+  @include media("<=phone") {
+    padding-right: 0;
+  }
 }
 
 .home__project--title--time {
   width: 6%;
   padding-right: 73rem;
+
+  @include media("<=phone") {
+    width: 15%;
+    padding-right: 0;
+  }
 }
 
 .home__project--title--text {
   width: 10%;
+
+  @include media("<=phone") {
+    width: 21%;
+  }
 }
 
 .home__project--about {
   display: flex;
   padding-bottom: 5rem;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .home__project--about--info {
   width: 50%;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .home__project--about--info--title--span {
@@ -181,11 +258,20 @@
   padding: 7rem 0 0 20rem;
   width: 50%;
   line-height: 1.2;
+
+  @include media("<=phone") {
+    padding: 5rem 0 0 0;
+  }
 }
 
 .home__project--about--gallery--media {
   width: 50%;
   height: 112rem;
+
+  @include media("<=phone") {
+    width: 100%;
+    height: 45rem;
+  }
 }
 
 .home__prpject--about--gallery--media--image {
@@ -194,32 +280,64 @@
 
 .home__intro {
   width: 90%;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .home__intro__wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    position: relative;
+    gap: 5rem;
+  }
 }
 
 .home__intro__wrapper--num {
   @extend %description-22;
   text-transform: uppercase;
+
+  &:last-child {
+    @include media("<=phone") {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }
 
 .home__intro__wrapper__info {
   width: 55%;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .home__intro__wrapper__info--text {
   @extend %title-144;
   line-height: 0.9;
+
+  @include media("<=phone") {
+    line-height: 1;
+  }
 }
 
 .home__intro__wrapper__info--gallery--media {
   padding: 3rem 0;
   width: 70rem;
   height: 45rem;
+
+  @include media("<=phone") {
+    padding: 1rem 0;
+    width: 80%;
+    height: 30rem;
+  }
 }
 
 .home__intro__wrapper__info--gallery--media--image {
@@ -233,17 +351,31 @@
   align-items: end;
   padding-top: 7rem;
   @extend %description-22;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: self-start;
+  }
 }
 
 .home__intro__wrapper__info--paras--text {
   width: 55%;
   line-height: 1.2;
   margin-right: 7.5rem;
+
+  @include media("<=phone") {
+    width: 80%;
+  }
 }
 
 .home__intro__wrapper__info--paras-a {
   @extend %btn-a;
   @extend %hover-effect;
+
+  @include media("<=phone") {
+    width: max-content;
+  }
 }
 
 .home__contact {
@@ -266,6 +398,10 @@
 
 .home__contact--title--text {
   width: 10%;
+
+  @include media("<=phone") {
+    width: 15%;
+  }
 }
 
 .home__contact--email {

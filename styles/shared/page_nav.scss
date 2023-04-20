@@ -3,6 +3,10 @@
   width: 40%;
   margin: 4.2rem auto;
   justify-content: space-between;
+
+  @include media("<=phone") {
+    display: none;
+  }
 }
 
 %page__nav--text {

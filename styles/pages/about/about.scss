@@ -2,6 +2,10 @@
   @extend %font-family;
   background-color: $color-liberty;
   color: $color-black;
+
+  @include media("<=phone") {
+    padding-top: 30rem;
+  }
 }
 
 .about__wrapper {
@@ -26,6 +30,11 @@
 
 .about__info__wrapper {
   display: flex;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .about__info__title {
@@ -44,6 +53,10 @@
   width: 86rem;
   height: 55rem;
   padding: 3rem 0;
+
+  @include media("<=phone") {
+    padding-bottom: 1rem;
+  }
 }
 
 .about__info__gallry__media__image {
@@ -60,15 +73,30 @@
   display: flex;
   justify-content: space-between;
   width: 70%;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10rem;
+    gap: 5rem;
+  }
 }
 
 .about__info__journey__para {
   width: 20%;
   line-height: 1.2;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .about__info__journey__into {
   width: 45%;
+
+  @include media("<=phone") {
+    width: 100%;
+  }
 }
 
 .about__info__journey__intro__para {
@@ -79,6 +107,11 @@
 .about__info__journey__intro__media {
   width: 100%;
   height: 65rem;
+
+  @include media("<=phone") {
+    width: 65%;
+    height: 50rem;
+  }
 }
 
 .about__info__journey__intro__media__image {
@@ -95,6 +128,11 @@
 .about__service__header {
   display: flex;
   padding-bottom: 10rem;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .about__service__header__title {
@@ -109,6 +147,10 @@
 
 .about__service__content__wrapper {
   padding-left: 34rem;
+
+  @include media("<=phone") {
+    padding-left: 0;
+  }
 }
 
 .about__service__content {
@@ -145,11 +187,18 @@
 }
 
 .about__service__content__header__title {
+  @include media("<=phone") {
+    display: none;
+  }
 }
 
 .about__service__content__header__para {
   position: absolute;
   left: 25%;
+
+  @include media("<=phone") {
+    left: 0;
+  }
 }
 
 .about__service__content__header__icon {
@@ -162,6 +211,10 @@
   width: 70%;
   padding-left: 35.5rem;
   padding-bottom: 10rem;
+
+  @include media("<=phone") {
+    padding-left: 0;
+  }
 }
 
 .about__service__content__body__para {
@@ -177,6 +230,11 @@
 .about__awards__header {
   display: flex;
   padding-bottom: 10rem;
+
+  @include media("<=phone") {
+    flex-direction: column;
+    gap: 5rem;
+  }
 }
 
 .about__awards__header__title {
@@ -189,6 +247,10 @@
 
 .about__awards__info__wrapper {
   padding-left: 34rem;
+
+  @include media("<=phone") {
+    padding-left: 0;
+  }
 }
 
 .about__awards__info {
@@ -210,21 +272,41 @@
     width: 100%;
     background-color: $color-black;
   }
+
+  @include media("<=phone") {
+    padding: 3rem 0;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
 }
 
 .about__awards__info__name {
   position: absolute;
   left: 0;
+
+  @include media("<=phone") {
+    position: unset;
+  }
 }
 
 .about__awards__info__platform {
   position: absolute;
   left: 40%;
+
+  @include media("<=phone") {
+    position: unset;
+  }
 }
 
 .about__awards__info__year {
   position: absolute;
   right: 5rem;
+
+  @include media("<=phone") {
+    position: unset;
+  }
 }
 
 .about__contact {
@@ -247,6 +329,10 @@
 
 .about__contact--title--text {
   width: 10%;
+
+  @include media("<=phone") {
+    width: 15%;
+  }
 }
 
 .about__contact--email {
