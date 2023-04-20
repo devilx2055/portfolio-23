@@ -23,6 +23,7 @@
     "glslify-loader": "^2.0.0",
     "gsap": "^3.6.1",
     "include-media": "^1.4.10",
+    "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^1.5.0",
     "normalize-wheel": "^1.0.1",
     "postcss-loader": "^5.2.0",
