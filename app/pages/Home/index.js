@@ -7,9 +7,17 @@ export default class Home extends Page {
       element: ".home",
       elements: {
         navigation: document.querySelector(".navigation"),
-        button: ".home__about__wrpper--info--about--text--link",
-        button2: ".home__intro__wrapper__info--paras-a",
+        link: ".home__about__wrpper--info--about--text--link",
+        linkTwo: ".home__intro__wrapper__info--paras-a",
       },
+    });
+  }
+
+  create() {
+    super.create();
+
+    this.elements.link.addEventListener("click", () => {
+      console.log("Oh You Clicked Me");
     });
   }
 }
