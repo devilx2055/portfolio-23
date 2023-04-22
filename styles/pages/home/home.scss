@@ -2,6 +2,7 @@
   @extend %font-family;
   background-color: $color-liberty;
   color: $color-black;
+  opacity: 0;
 
   @include media("<=phone") {
     padding-top: 30rem;

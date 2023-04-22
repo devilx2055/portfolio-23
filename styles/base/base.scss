@@ -15,4 +15,5 @@ html {
 body {
   font-family: $font-ppneue;
   @extend %description-16;
+  background-color: $color-liberty;
 }
