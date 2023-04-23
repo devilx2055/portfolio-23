@@ -34,11 +34,11 @@ export default class Page {
 
   show() {
     return new Promise((resolve) => {
-      gsap.from(this.element, {
-        autoAlpha: 0,
-        duration: 1,
-        onComplete: resolve,
-      });
+      gsap.fromTo(
+        this.element,
+        { autoAlpha: 0 },
+        { autoAlpha: 1, onComplete: resolve }
+      );
     });
   }
 

@@ -31,6 +31,7 @@ export default class Preloader extends Component {
 
     const percent = this.length / this.elements.images.length;
 
+    this.elements.number.style.bottom = `${percent * (100 - 15)}%`;
     this.elements.number.innerHTML = `${Math.round(percent * 100)}`;
 
     if (percent === 1) {
@@ -44,17 +45,18 @@ export default class Preloader extends Component {
         delay: 2,
       });
 
-      this.animateOut.to(this.elements.number, {
-        autoAlpha: 0,
-      });
-
       this.animateOut.to(
-        this.elements.preloaderText,
+        this.elements.number,
         {
           autoAlpha: 0,
         },
-        0
+        "-0.7"
       );
+
+      this.animateOut.to(this.elements.preloaderText, {
+        autoAlpha: 0,
+        duration: 1,
+      });
 
       this.animateOut.to(this.element, {
         scaleY: 0,
