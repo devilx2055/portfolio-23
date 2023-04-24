@@ -1,4 +1,5 @@
 .about {
+  @extend %page;
   @extend %font-family;
   background-color: $color-liberty;
   color: $color-black;

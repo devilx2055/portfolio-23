@@ -1,4 +1,5 @@
 .contact {
+  @extend %page;
   @extend %font-family;
   background-color: $color-black;
   color: $color-white;
