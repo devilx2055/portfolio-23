@@ -5,6 +5,9 @@ export default class Work extends Page {
     super({
       id: "work",
       element: ".work",
+      elements: {
+        wrapper: ".work__wrapper",
+      },
     });
   }
 }
