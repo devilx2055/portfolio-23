@@ -4,10 +4,6 @@
   background-color: $color-liberty;
   color: $color-black;
   opacity: 0;
-
-  @include media("<=phone") {
-    padding-top: 30rem;
-  }
 }
 
 .home__wrapper {
@@ -16,6 +12,10 @@
 
   section {
     padding-bottom: 20rem;
+  }
+
+  @include media("<=phone") {
+    padding-top: 30rem;
   }
 }
 
