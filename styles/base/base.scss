@@ -36,3 +36,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
+[data-animation="title"] {
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+}

@@ -4,6 +4,8 @@ import normalizeWheel from "normalize-wheel";
 import each from "lodash/each";
 
 import Title from "../animation/Title";
+import Paragraph from "../animation/Paragraph";
+
 import { map } from "lodash";
 
 export default class Page {
@@ -12,6 +14,7 @@ export default class Page {
     this.selectorChildren = {
       ...elements,
       animationsTitles: '[data-animation="title"]',
+      animationParagraphs: '[data-animation="paragraph"]',
     };
 
     this.id = id;
@@ -53,15 +56,20 @@ export default class Page {
   }
 
   createAnimations() {
-    console.log(this.elements.animationsTitles);
-
     this.animationsTitles = map(this.elements.animationsTitles, (element) => {
       return new Title({
         element,
       });
     });
 
-    console.log(this.animationsTitles);
+    this.animationParagraphs = map(
+      this.elements.animationsParagraphs,
+      (element) => {
+        return new Paragraph({
+          element,
+        });
+      }
+    );
   }
 
   show() {
@@ -100,6 +108,8 @@ export default class Page {
 
   onResize() {
     this.scroll.limit = this.elements.wrapper.clientHeight - window.innerHeight;
+
+    each(this.animationsTitles, (animation) => animation.onResize());
   }
 
   update() {
