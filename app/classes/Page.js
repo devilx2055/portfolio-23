@@ -14,7 +14,7 @@ export default class Page {
     this.selectorChildren = {
       ...elements,
       animationsTitles: '[data-animation="title"]',
-      animationParagraphs: '[data-animation="paragraph"]',
+      animationsParagraphs: '[data-animation="paragraph"]',
     };
 
     this.id = id;
@@ -56,13 +56,17 @@ export default class Page {
   }
 
   createAnimations() {
+    this.animations = [];
+
     this.animationsTitles = map(this.elements.animationsTitles, (element) => {
       return new Title({
         element,
       });
     });
 
-    this.animationParagraphs = map(
+    this.animations.push(...this.animationsTitles);
+
+    this.animationsParagraphs = map(
       this.elements.animationsParagraphs,
       (element) => {
         return new Paragraph({
@@ -70,6 +74,8 @@ export default class Page {
         });
       }
     );
+
+    this.animations.push(...this.animationsParagraphs);
   }
 
   show() {
@@ -109,7 +115,7 @@ export default class Page {
   onResize() {
     this.scroll.limit = this.elements.wrapper.clientHeight - window.innerHeight;
 
-    each(this.animationsTitles, (animation) => animation.onResize());
+    each(this.animations, (animation) => animation.onResize());
   }
 
   update() {
