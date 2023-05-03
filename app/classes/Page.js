@@ -3,8 +3,9 @@ import Prefix from "prefix";
 import normalizeWheel from "normalize-wheel";
 import each from "lodash/each";
 
-import Title from "../animation/Title";
+import Lable from "../animation/Lable";
 import Paragraph from "../animation/Paragraph";
+import Title from "../animation/Title";
 
 import { map } from "lodash";
 
@@ -15,6 +16,7 @@ export default class Page {
       ...elements,
       animationsTitles: '[data-animation="title"]',
       animationsParagraphs: '[data-animation="paragraph"]',
+      animationsLables: '[data-animation="lable"]',
     };
 
     this.id = id;
@@ -76,6 +78,14 @@ export default class Page {
     );
 
     this.animations.push(...this.animationsParagraphs);
+
+    this.animationsLables = map(this.elements.animationsLables, (element) => {
+      return new Lable({
+        element,
+      });
+    });
+
+    this.animations.push(...this.animationsLables);
   }
 
   show() {

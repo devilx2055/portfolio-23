@@ -38,7 +38,8 @@ body {
 }
 
 [data-animation="title"],
-[data-animation="paragraph"] {
+[data-animation="paragraph"],
+[data-animation="lable"] {
   span {
     display: inline-block;
     overflow: hidden;
