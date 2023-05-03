@@ -8,20 +8,20 @@ block content
         .home__wrapper
                 .home__nav
                     .home__nav--text
-                        p.home__nav--text--para
+                        p.home__nav--text--para(data-animation="lable")
                             | Currentyly doing
                             | Freelancing
 
                     .home__nav--text
-                        p.home__nav--text--para
+                        p.home__nav--text--para(data-animation="lable")
                             | Based in ahemdabad
                             | India
 
                 section.home__info
                     .home__info--para
-                        p.home__info--para--text(data-animation="title")
-                            | Creative
-                            | Developer
+                        p.home__info--para--text
+                            span(data-animation="title") Creative
+                            span(data-animation="title") Developer
 
                     figure.home__gallery__media
                         img.home__gallery__media--image(alt="hello" data-src="../../shared/pic1.jpg")
@@ -30,15 +30,15 @@ block content
                         .home__info__arrow
                            span.home__info__arrow__logo ↓
 
-                           p.home__info__arrow__text
+                           p.home__info__arrow__text(data-animation="lable")
                                | I SUPPORT DESIGNERS
                                | AND AGENCIES WITH
                                | CREATIVE DEVELOPMENT
 
                         .home__info--para
-                            p.home__info--para--text(data-animation="title")
-                                | Priyanshu
-                                | Vanra
+                            p.home__info--para--text
+                                span(data-animation="title") Priyanshu
+                                span(data-animation="title") Vanra
 
                 section.home__about
                     .home__about--wrapper
@@ -57,19 +57,19 @@ block content
                                     | FOOTBALL.
 
                             .home__about__wrpper--info--about
-                                p.home__about__wrpper--info--about--para
+                                p.home__about__wrpper--info--about--para(data-animation="lable")
                                     | A blend of UI and
                                     | product engineering.
 
                                 .home__about__wrpper--info--about--text
-                                    p.home__about__wrpper--info--about--text--para
+                                    p.home__about__wrpper--info--about--text--para(data-animation="lable")
                                         | With a background in design, I work closely with design
                                         | focused teams to build websites and microsites for
                                         | companies and individuals. I have years of experience
                                         | working and collaborating on product teams and leading
                                         | engineering efforts.
 
-                                    p.home__about__wrpper--info--about--text--para
+                                    p.home__about__wrpper--info--about--text--para(data-animation="lable")
                                         | With my experience in UI and product engineering, I solve
                                         | product problems and build appealing usable web
                                         | experiences.
@@ -78,15 +78,15 @@ block content
 
                 section.home__project
                     .home__project--title
-                        p.home__project--title--num  02/
+                        p.home__project--title--num(data-animation="lable")  02/
 
                         .home__project--title--time
-                            p.home__project--title--time--text
+                            p.home__project--title--time--text(data-animation="lable")
                                 | RECENT
                                 | PROJECT
 
                         .home__project--title--text
-                            p.home__project--title--text--para
+                            p.home__project--title--text--para(data-animation="lable")
                                 | CREATIVE
                                 | DEVELOPMENT
 
@@ -98,7 +98,7 @@ block content
 
 
                             .home__project--about--info--para
-                                p.home__project--about--info--para--text
+                                p.home__project--about--info--para--text(data-animation="lable")
                                     | AN ANALYSIS AND
                                     | DISCOVERY TOOL FOR
                                     | SPOTIFY USERS
@@ -112,7 +112,7 @@ block content
                                 p.home__project--about--info--title--span--text(data-animation="title") INTELIA
 
                             .home__project--about--info--para
-                                p.home__project--about--info--para--text
+                                p.home__project--about--info--para--text(data-animation="lable")
                                     | AN ANALYSIS AND
                                     | DISCOVERY TOOL FOR
                                     | SPOTIFY USERS
@@ -122,7 +122,7 @@ block content
 
                 section.home__intro
                     .home__intro__wrapper
-                        p.home__intro__wrapper--num 03/
+                        p.home__intro__wrapper--num(data-animation="lable") 03/
 
                         .home__intro__wrapper__info
                             p.home__intro__wrapper__info--text(data-animation="title") FOOTBALL,
@@ -136,7 +136,7 @@ block content
 
                             .home__intro__wrapper__info--paras
                                 .home__intro__wrapper__info--paras--text
-                                    p.home__intro__wrapper__info--paras--text--p
+                                    p.home__intro__wrapper__info--paras--text--p(data-animation="lable")
                                         | My hobbies take up a good portion of my leisure
                                         | time. I'm either cheering up FC Bayern Munich,
                                         | winning a game of FIFA with them, exploring VR
@@ -144,20 +144,20 @@ block content
 
                                 a.home__intro__wrapper__info--paras-a(href="/about") More about me
 
-                        p.home__intro__wrapper--num About Me
+                        p.home__intro__wrapper--num(data-animation="lable") About Me
 
                 section.home__contact
                     .home__contact__wrapper
                         .home__contact--title
-                            p.home__contact--title--num  04/
+                            p.home__contact--title--num(data-animation="lable")  04/
 
                             .home__contact--title--time
-                                p.home__contact--title--time--text
+                                p.home__contact--title--time--text(data-animation="lable")
                                     | WANT TO
                                     | WORK TOGETHER ?
 
                             .home__contact--title--text
-                                p.home__contact--title--text-p
+                                p.home__contact--title--text-p(data-animation="lable")
                                     | SEND ME A
                                     | MESSAGE
 
@@ -165,8 +165,6 @@ block content
                             span.home__contact--email--span
                                 p.home__contact--email--span--para(data-animation="title") PRIYANSHUVANRA
                                 p.home__contact--email--span--para(data-animation="title") 2@GMAIL.COM
-                            //- p.home__contact--email--para PRIYANSHUVANRA
-                            //- p.home__contact--email--para 2@GMAIL.COM
 
                 //- footer
                 include ../partials/footer

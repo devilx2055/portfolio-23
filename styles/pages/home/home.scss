@@ -36,10 +36,12 @@
   width: 85rem;
   line-height: 0.9;
   padding-bottom: 5rem;
+  overflow: hidden;
 
   &:last-child {
     text-align: right;
     padding-bottom: 0;
+    width: 139rem;
 
     @include media("<=phone") {
       text-align: left;

@@ -47,7 +47,8 @@
 
 .about__info__para__text {
   @extend %title-144;
-  width: 50%;
+  width: 65%;
+  overflow: hidden;
 }
 
 .about__info__gallry__media {
@@ -84,7 +85,7 @@
 }
 
 .about__info__journey__para {
-  width: 20%;
+  width: 25%;
   line-height: 1.2;
 
   @include media("<=phone") {
