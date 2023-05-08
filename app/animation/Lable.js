@@ -33,6 +33,7 @@ export default class Lable extends Animation {
   }
 
   animateOut() {
+    console.log("animate out");
     gsap.set(this.element, {
       autoAlpha: 0,
     });
