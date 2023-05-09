@@ -1,0 +1,45 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+
+  @include media("<=phone") {
+    display: none;
+  }
+
+  &.active {
+    .cursor-inner {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &-inner {
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    opacity: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s $ease-in-out;
+    @extend %center;
+    background-color: white;
+    padding: 1rem;
+
+    .cursor-text {
+      @extend %font-family;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      color: black;
+      text-align: center;
+      transition: all 0.5s $ease-in-out;
+    }
+  }
+}
