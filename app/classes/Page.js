@@ -4,6 +4,9 @@ import each from "lodash/each";
 
 import Scroll from "../components/Scroll";
 import Parallax from "../animation/Parallax";
+import Cursor from "../components/Cursor";
+
+import AsyncLoad from "../classes/AsyncLoad";
 
 import { mapEach } from "../utils/dom";
 
@@ -11,7 +14,7 @@ import Lable from "../animation/Lable";
 import Paragraph from "../animation/Paragraph";
 import Title from "../animation/Title";
 
-import { map } from "lodash";
+import { forEach, map } from "lodash";
 
 export default class Page {
   constructor({ element, elements, id }) {
@@ -22,6 +25,8 @@ export default class Page {
       animationsTitles: '[data-animation="title"]',
       animationsParagraphs: '[data-animation="paragraph"]',
       animationsLables: '[data-animation="lable"]',
+
+      preloaders: "[data-src]",
     };
 
     this.scroll = null;
@@ -51,8 +56,10 @@ export default class Page {
       }
     });
 
+    this.createPreloader();
     this.initSmoothScroll();
     this.initParallax();
+    this.initCursor();
     this.createAnimations();
   }
 
@@ -94,6 +101,16 @@ export default class Page {
   initParallax() {
     this.parallax = mapEach(this.elements.animationsImage, (element) => {
       return new Parallax(element);
+    });
+  }
+
+  initCursor() {
+    this.cursor = new Cursor();
+  }
+
+  createPreloader() {
+    this.preloader = mapEach(this.elements.preloaders, (element) => {
+      return new AsyncLoad({ element });
     });
   }
 
