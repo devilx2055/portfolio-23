@@ -9,6 +9,8 @@ import Contact from "./pages/Contact";
 
 class App {
   constructor() {
+    this.handleOnPopState = this.onPopState.bind(this);
+
     this.createPreloader();
     this.createContent();
     this.createPages();
@@ -49,7 +51,8 @@ class App {
     this.page.show();
   }
 
-  async onChange(url) {
+  async onChange({ url, push = true }) {
+    if (url === window.location.href) return;
     await this.page.hide();
 
     const request = await window.fetch(url);
@@ -57,6 +60,10 @@ class App {
     if (request.status === 200) {
       const html = await request.text();
       const div = document.createElement("div");
+
+      if (push) {
+        window.history.pushState({}, "", url);
+      }
 
       div.innerHTML = html;
 
@@ -94,7 +101,13 @@ class App {
   }
 
   addEventListeners() {
+    window.addEventListener("popstate", this.handleOnPopState);
+
     window.addEventListener("resize", this.onResize.bind(this));
+  }
+
+  onPopState() {
+    this.onChange({ url: window.location.pathname, push: false });
   }
 
   addLinkListeners() {
@@ -106,7 +119,7 @@ class App {
 
         const { href } = link;
 
-        this.onChange(href);
+        this.onChange({ url: href });
       };
     });
   }
