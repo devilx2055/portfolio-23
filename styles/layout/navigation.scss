@@ -1,8 +1,7 @@
 .navigation {
   position: fixed;
-  top: 0;
-  left: 0;
   top: 4.5rem;
+  left: 0;
   width: 100%;
   font-family: $font-ppneue;
   mix-blend-mode: difference;
@@ -13,31 +12,47 @@
   @extend %container;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @extend %description-22;
+  //   position: relative;
+  //   top: 4.5rem;
 }
 
 .navigation__link {
   @extend %btn-a;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   color: white;
 }
 
 .navigation__list {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   @include media("<=phone") {
     display: none;
   }
 }
 
-.navigation__list__item {
-  &:not(:last-child) {
-    padding-right: 0.5rem;
+.navigation__link {
+  @extend %link--hidden;
+  color: white;
+}
+
+.navigation__link-2 {
+  color: white;
+  display: none;
+
+  @include media("<=phone") {
+    opacity: 1;
   }
 }
 
-.navigation__link {
-  @extend %link--hidden;
-  padding-bottom: 1rem;
-  color: white;
+// Hamburger
+
+.navigation__wrapper-2 {
+  height: 100vh;
+  width: 100%;
+  background-color: $color-black;
+  display: none;
 }
