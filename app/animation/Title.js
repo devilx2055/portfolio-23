@@ -26,8 +26,7 @@ export default class Title extends Animation {
       },
       {
         y: "0%",
-        stagger: 0.1,
-        duration: 1,
+        stagger: 0.05,
       }
     );
   }

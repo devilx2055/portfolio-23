@@ -26,14 +26,12 @@ export default class Lable extends Animation {
       },
       {
         y: "0%",
-        stagger: 0.1,
-        duration: 1,
+        stagger: 0.05,
       }
     );
   }
 
   animateOut() {
-    console.log("animate out");
     gsap.set(this.element, {
       autoAlpha: 0,
     });

@@ -7,6 +7,7 @@ export default class Home extends Page {
       element: ".home",
       elements: {
         wrapper: ".home__wrapper",
+        pinSection: ".home__project--about--info--title--span",
         navigation: document.querySelector(".navigation"),
         link: ".home__about__wrpper--info--about--text--link",
         linkTwo: ".home__intro__wrapper__info--paras-a",
@@ -16,9 +17,5 @@ export default class Home extends Page {
 
   create() {
     super.create();
-
-    this.elements.link.addEventListener("click", () => {
-      console.log("Oh You Clicked Me");
-    });
   }
 }
