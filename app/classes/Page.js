@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import Prefix from "prefix";
 import each from "lodash/each";
 
 import Scroll from "../components/Scroll";
@@ -32,7 +31,6 @@ export default class Page {
 
     this.scroll = null;
     this.id = id;
-    this.transformPrefix = Prefix("transform");
   }
 
   create() {
@@ -122,6 +120,7 @@ export default class Page {
 
   show() {
     return new Promise((resolve) => {
+      this.onResize();
       this.animationIn = gsap.timeline();
 
       this.animationIn.fromTo(this.element, { autoAlpha: 0 }, { autoAlpha: 1 });
@@ -151,6 +150,9 @@ export default class Page {
   onMouseWheel(event) {}
 
   onResize() {
+    if (this.elements.wrapper) {
+      this.scroll.update();
+    }
     each(this.animations, (animation) => animation.onResize());
   }
 

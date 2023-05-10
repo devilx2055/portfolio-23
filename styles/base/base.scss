@@ -6,6 +6,7 @@
 
 html {
   font-size: calc(100vw / 1920 * 10) !important;
+  overflow: hidden;
 
   @include media("<=phone") {
     font-size: calc(100vw / 750 * 10) !important;
@@ -52,4 +53,8 @@ button {
   font: inherit;
   line-height: normal;
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
 }
