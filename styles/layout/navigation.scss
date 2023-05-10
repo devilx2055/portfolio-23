@@ -1,11 +1,15 @@
 .navigation {
   position: fixed;
-  top: 4.5rem;
+  top: 0;
   left: 0;
   width: 100%;
   font-family: $font-ppneue;
   mix-blend-mode: difference;
   z-index: 10;
+
+  &--active {
+    mix-blend-mode: normal;
+  }
 }
 
 .navigation__wrapper {
@@ -14,8 +18,8 @@
   justify-content: space-between;
   align-items: center;
   @extend %description-22;
-  //   position: relative;
-  //   top: 4.5rem;
+  position: relative;
+  top: 4.5rem;
 }
 
 .navigation__link {
@@ -41,10 +45,14 @@
 
 .navigation__link-2 {
   color: white;
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 7rem;
+  visibility: hidden;
 
   @include media("<=phone") {
-    opacity: 1;
+    visibility: visible;
+    right: 0;
   }
 }
 
@@ -54,5 +62,50 @@
   height: 100vh;
   width: 100%;
   background-color: $color-black;
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--active {
+    visibility: visible;
+  }
+
+  .ham__btn {
+    color: $color-white;
+    position: absolute;
+    right: 3rem;
+    top: 4.5rem;
+    @extend %description-22;
+  }
+
+  .hamburger__menu {
+    height: 100%;
+    width: 100%;
+
+    .hamburger__menu__wrapper {
+      @extend %container;
+      height: 100%;
+      padding: 4.5rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .hamburger__menu__link {
+        @extend %description-22;
+        color: $color-white;
+      }
+
+      .hamburger__menu__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .hamburger__menu__list__link {
+          @extend %title-144;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }

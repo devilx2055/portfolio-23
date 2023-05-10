@@ -5,6 +5,7 @@ import each from "lodash/each";
 import Scroll from "../components/Scroll";
 import Parallax from "../animation/Parallax";
 import Cursor from "../components/Cursor";
+import Navigation from "../components/Navigation";
 
 import AsyncLoad from "../classes/AsyncLoad";
 
@@ -60,6 +61,7 @@ export default class Page {
     this.initSmoothScroll();
     this.initParallax();
     this.initCursor();
+    this.createNavigation();
     this.createAnimations();
   }
 
@@ -112,6 +114,10 @@ export default class Page {
     this.preloader = mapEach(this.elements.preloaders, (element) => {
       return new AsyncLoad({ element });
     });
+  }
+
+  createNavigation() {
+    this.navigation = new Navigation();
   }
 
   show() {
