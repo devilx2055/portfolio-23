@@ -1,8 +1,9 @@
 .contact {
-  @extend %page;
+  //   @extend %page;
   @extend %font-family;
   background-color: $color-black;
   color: $color-white;
+  opacity: 0;
 }
 
 .contact__wrapper {

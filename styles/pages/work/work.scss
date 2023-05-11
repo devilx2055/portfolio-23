@@ -1,8 +1,9 @@
 .work {
-  @extend %page;
+  //   @extend %page;
   @extend %font-family;
   background-color: $color-liberty;
   color: $color-black;
+  opacity: 0;
 }
 
 .work__wrapper {
