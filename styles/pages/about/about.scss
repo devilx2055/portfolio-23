@@ -1,8 +1,8 @@
 .about {
-  @extend %page;
+  //   @extend %page;
   @extend %font-family;
   background-color: $color-liberty;
-  color: $color-black;
+  opacity: 0;
 
   @include media("<=phone") {
     padding-top: 30rem;
@@ -206,13 +206,25 @@
 .about__service__content__header__icon {
   position: absolute;
   right: 0;
+  height: 5rem;
+  width: 5rem;
+  @extend %center;
+  cursor: pointer;
 }
 
 .about__service__content__body {
-  display: none;
+  height: 0;
+  visibility: hidden;
   width: 70%;
   padding-left: 35.5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 0;
+
+  &--active {
+    transition: all 0.5s $ease-in-out;
+    height: 100%;
+    visibility: visible;
+    padding-bottom: 10rem;
+  }
 
   @include media("<=phone") {
     padding-left: 0;

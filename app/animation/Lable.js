@@ -26,7 +26,7 @@ export default class Lable extends Animation {
       },
       {
         y: "0%",
-        stagger: 0.05,
+        stagger: 0.01,
       }
     );
   }
