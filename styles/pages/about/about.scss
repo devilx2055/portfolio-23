@@ -223,7 +223,7 @@
     transition: all 0.5s $ease-in-out;
     height: 100%;
     visibility: visible;
-    padding-bottom: 10rem;
+    padding-bottom: 5;
   }
 
   @include media("<=phone") {
