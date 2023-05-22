@@ -22,7 +22,6 @@ export default class About extends Page {
   }
 
   createAnimation() {
-    console.log(this.elements.service_btn);
     map(this.elements.service_btn, (element, index) => {
       element.addEventListener("click", () => {
         this.elements.service_content[index].classList.toggle(

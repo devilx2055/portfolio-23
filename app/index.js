@@ -11,8 +11,8 @@ class App {
   constructor() {
     this.handleOnPopState = this.onPopState.bind(this);
 
-    this.createPreloader();
     this.createContent();
+    this.createPreloader();
     this.createPages();
 
     this.addEventListeners();

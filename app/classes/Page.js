@@ -1,3 +1,4 @@
+import { forEach, map } from "lodash";
 import gsap from "gsap";
 import each from "lodash/each";
 
@@ -13,8 +14,6 @@ import { mapEach } from "../utils/dom";
 import Lable from "../animation/Lable";
 import Paragraph from "../animation/Paragraph";
 import Title from "../animation/Title";
-
-import { forEach, map } from "lodash";
 
 export default class Page {
   constructor({ element, elements, id }) {
@@ -55,12 +54,12 @@ export default class Page {
       }
     });
 
+    this.createAnimations();
     this.createPreloader();
     this.initSmoothScroll();
     this.initParallax();
     this.initCursor();
     this.createNavigation();
-    this.createAnimations();
   }
 
   createAnimations() {
@@ -94,6 +93,12 @@ export default class Page {
     this.animations.push(...this.animationsLables);
   }
 
+  createPreloader() {
+    this.preloader = mapEach(this.elements.preloaders, (element) => {
+      return new AsyncLoad({ element });
+    });
+  }
+
   initSmoothScroll() {
     this.scroll = new Scroll(this.elements.wrapper);
   }
@@ -106,12 +111,6 @@ export default class Page {
 
   initCursor() {
     this.cursor = new Cursor();
-  }
-
-  createPreloader() {
-    this.preloader = mapEach(this.elements.preloaders, (element) => {
-      return new AsyncLoad({ element });
-    });
   }
 
   createNavigation() {
@@ -153,6 +152,7 @@ export default class Page {
     if (this.elements.wrapper) {
       this.scroll.update();
     }
+
     each(this.animations, (animation) => animation.onResize());
   }
 
