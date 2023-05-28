@@ -4,7 +4,6 @@
   background-color: $color-liberty;
   color: $color-black;
   opacity: 0;
-  pointer-events: none;
 }
 
 .home__wrapper {
@@ -58,7 +57,7 @@
 
 .home__gallery__media {
   width: 73rem;
-  height: 30rem;
+  height: 40rem;
   padding-bottom: 5rem;
 
   @include media("<=phone") {
