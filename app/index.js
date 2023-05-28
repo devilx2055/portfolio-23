@@ -1,3 +1,5 @@
+import NormalizeWheel from "normalize-wheel";
+
 import each from "lodash/each";
 
 import Preloader from "./components/Preloader";
@@ -6,13 +8,14 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import normalizeWheel from "normalize-wheel";
 
 class App {
   constructor() {
     this.handleOnPopState = this.onPopState.bind(this);
 
-    this.createContent();
     this.createPreloader();
+    this.createContent();
     this.createPages();
 
     this.addEventListeners();
@@ -92,6 +95,14 @@ class App {
     }
   }
 
+  onMouseWheel(event) {
+    const normalizeWheel = NormalizeWheel(event);
+
+    if (this.page && this.page.onMouseWheel) {
+      this.page.onMouseWheel(normalizeWheel);
+    }
+  }
+
   update() {
     if (this.page && this.page.update) {
       this.page.update();
@@ -102,6 +113,8 @@ class App {
 
   addEventListeners() {
     window.addEventListener("popstate", this.handleOnPopState);
+
+    window.addEventListener("mousewheel", this.onMouseWheel.bind(this));
 
     window.addEventListener("resize", this.onResize.bind(this));
   }
