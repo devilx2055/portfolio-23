@@ -158,7 +158,6 @@ export default class Page {
 
   onMouseWheel({ pixelY }) {
     this.scroll.target += pixelY;
-    console.log(this.scroll.target);
   }
 
   onResize() {

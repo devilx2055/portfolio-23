@@ -1,5 +1,5 @@
 import NormalizeWheel from "normalize-wheel";
-
+import gsap from "gsap";
 import each from "lodash/each";
 
 import Preloader from "./components/Preloader";
@@ -8,11 +8,11 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import normalizeWheel from "normalize-wheel";
 
 class App {
   constructor() {
     this.handleOnPopState = this.onPopState.bind(this);
+    this.gsapConfig();
 
     this.createPreloader();
     this.createContent();
@@ -22,6 +22,12 @@ class App {
     this.addLinkListeners();
 
     this.update();
+  }
+
+  gsapConfig() {
+    gsap.config({
+      nullTargetWarn: false,
+    });
   }
 
   createPreloader() {
@@ -124,7 +130,7 @@ class App {
   }
 
   addLinkListeners() {
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll("a.transition-link");
 
     each(links, (link) => {
       link.onclick = (event) => {
