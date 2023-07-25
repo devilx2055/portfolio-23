@@ -8,7 +8,8 @@
     "backend:development": "nodemon app.mjs",
     "frontend:build": "webpack --progress --config webpack.config.prod.js",
     "frontend:dev": "webpack serve --progress --config webpack.config.dev.js",
-    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:dev\""
+    "dev": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:dev\"",
+    "start" : "npm run backend:build"
   },
   "author": "",
   "license": "ISC",
